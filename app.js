@@ -11,9 +11,19 @@ const app = Vue.createApp ({
 
     data(){
         return{
-            quotes: quotes
+            quotes: quotes,
+            newQuote: 'Hola munod'
         }
     },
+    methods:{
+        addQuote({charCode}){
+            //if(charCode !==13) return
+
+            this.quotes.unshift({
+                quote: this.newQuote
+            })
+        }
+    }
 
 })
 
